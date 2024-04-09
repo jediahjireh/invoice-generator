@@ -72,7 +72,7 @@ public class Customer extends Order {
     // method to calculate the total amount of the order
     public double calculateTotalAmount() {
         // initialise total amount
-        totalAmount = 0.00;
+        totalAmount = 0.0;
         // iterate over meal quantity and price maps to calculate total of ordered meals
         if (mealQuantity != null && mealPrice != null) {
             for (Map.Entry<String, Integer> entry : mealQuantity.entrySet()) {
@@ -89,9 +89,9 @@ public class Customer extends Order {
         }
         // if meal quantity and/or price is null
         else {
-            totalAmount = 0.00;
+            totalAmount = 0.0;
         }
-        // send calculated total amount
+        // send calculated total amount rounded-off to 2 decimal places
         return totalAmount;
     }
 }

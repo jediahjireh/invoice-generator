@@ -2,6 +2,7 @@
 //import java packages
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
 import java.util.Formatter;
 import java.util.HashMap;
 import java.util.Map;
@@ -65,11 +66,14 @@ public class InvoiceGenerator {
 
         // create new Customer object and initialise total amount for calculation
         Customer customer = new Customer(name, location, contactNumber, orderNumber, email, address, mealQuantity,
-                mealPrice, specialInstructions, 0.00);
+                mealPrice, specialInstructions, 0.0);
 
-        // display calculated total amount
+        // get calculated total amount
         double totalAmount = customer.calculateTotalAmount();
-        System.out.println("Total amount: " + totalAmount);
+        // format total amount to 2 decimal places
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        // display calculated total amount formatted to 2 decimal places
+        System.out.println("Total amount: R" + decimal.format(totalAmount));
 
         // return new Customer object
         return customer;
