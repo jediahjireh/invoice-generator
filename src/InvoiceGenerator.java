@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 //standalone class
-public class FoodQuick {
+public class InvoiceGenerator {
 
     // main() method
     public static void main(String[] args) {
