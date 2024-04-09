@@ -101,7 +101,7 @@ public class FoodQuick {
 
         // try-catch block
         // new scanner object to read through new file object for drivers text file
-        try (Scanner fileScanner = new Scanner(new File("src/drivers.txt"))) {
+        try (Scanner fileScanner = new Scanner(new File("src/driver-info.txt"))) {
             // iterate through lines of drivers text file
             while (fileScanner.hasNextLine()) {
                 // read line of text file
